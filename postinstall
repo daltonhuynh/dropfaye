@@ -1,4 +1,4 @@
 #!/bin/sh
 god terminate || echo "(you should ignore the error on the previous line)"
-god -c thin.god
+god -c dropfaye.god
 god status
