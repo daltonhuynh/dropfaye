@@ -13,7 +13,7 @@ set :rails_env, :production
 set :current_path, "#{deploy_to}/current"
 
 # add nginx later
-role :app, "ec2-23-21-32-47.compute-1.amazonaws.com"
+role :app, "ec2-23-21-48-173.compute-1.amazonaws.com"
 
 environment = 'production'
 
