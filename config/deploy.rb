@@ -24,6 +24,6 @@ after 'deploy', 'set_permissions'
 after 'deploy:setup', 'set_permissions'
 
 task :set_permissions do
-  sudo "chown ubuntu #{deploy_to}"
-  sudo "chmod -R g+w #{deploy_to}"
+  run "#{sudo} chown #{user} #{deploy_to}"
+  run "#{sudo} chmod -R g+w #{deploy_to}"
 end
