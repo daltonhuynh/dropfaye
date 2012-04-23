@@ -7,8 +7,6 @@ set :user, "ubuntu"
 set :repository,  "git@github.com:huydalton/dropfaye.git"
 set :branch, "master"
 
-set :use_sudo, true
-
 set :deploy_to, "~/apps/#{application}"
 set :deploy_via, :remote_cache
 set :rails_env, :production
@@ -20,10 +18,3 @@ role :app, "ec2-23-21-32-47.compute-1.amazonaws.com"
 environment = 'production'
 
 after "deploy:restart", "deploy:cleanup"
-after 'deploy', 'set_permissions'
-after 'deploy:setup', 'set_permissions'
-
-task :set_permissions do
-  run "#{sudo} chown #{user} #{deploy_to}"
-  run "#{sudo} chmod -R g+w #{deploy_to}"
-end
