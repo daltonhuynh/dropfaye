@@ -1,7 +1,7 @@
 $: << "."
 $stdout.sync = true
 
-require 'rack/ssl'
+#require 'rack/ssl'
 require 'faye'
 
 require 'auth_ext'
