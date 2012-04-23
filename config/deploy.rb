@@ -6,6 +6,7 @@ set :scm, "git"
 set :user, "ubuntu"
 set :repository,  "git@github.com:huydalton/dropfaye.git"
 set :branch, "master"
+set :use_sudo, false
 
 set :deploy_to, "~/apps/#{application}"
 set :deploy_via, :remote_cache
