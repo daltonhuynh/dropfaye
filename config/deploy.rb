@@ -1,6 +1,12 @@
-require "bundler/capistrano"
+# Add RVM's lib directory to the load path.
+$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+
+require "rvm/capistrano"
 
 default_run_options[:pty] = true  # Must be set for the password prompt from git to work
+set :rvm_ruby_string, '1.9.3'
+set :rvm_type, :user  # Don't use system-wide RVM
+
 set :application, "dropfaye"
 set :scm, "git"
 set :user, "ubuntu"
