@@ -8,7 +8,6 @@ set :repository,  "git@github.com:huydalton/dropfaye.git"
 set :branch, "master"
 
 set :deploy_to, "/u/apps/#{application}"
-set :deploy_via, :remote_cache
 set :rails_env, :production
 set :current_path, "#{deploy_to}/current"
 
