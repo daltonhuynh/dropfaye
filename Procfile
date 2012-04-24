@@ -1,1 +1,1 @@
-web: bundle exec rackup config.ru -s thin -p $PORT -E production
+web: bundle exec rackup config.ru -s thin -p 5000 -E production
